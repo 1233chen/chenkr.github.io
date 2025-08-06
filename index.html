@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+  <script>
+    (function () {
+      var a_idx = 0;
+      window.onclick = function (event) {
+        var a = new Array("✨", "🤖", "🥳", "👋", "🦾", "🐽");
+
+        var heart = document.createElement("b");
+        heart.onselectstart = new Function('event.returnValue=false');
+
+        document.body.appendChild(heart).innerHTML = a[a_idx];
+        a_idx = (a_idx + 1) % a.length;
+        heart.style.cssText = "position: fixed;left:-100%;";
+
+        var f = 16,
+          x = event.clientX - f / 2,
+          y = event.clientY - f,
+          c = randomColor(),
+          a = 1,
+          s = 1.2;
+
+        var timer = setInterval(function () {
+          if (a <= 0) {
+            document.body.removeChild(heart);
+            clearInterval(timer);
+          } else {
+            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+              c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+              s + ");";
+
+            y--;
+            a -= 0.016;
+            s += 0.002;
+          }
+        }, 15)
+
+      }
+      function randomColor() {
+
+        return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+          .random() * 255)) + ")";
+
+      }
+    }());
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Kerui Chen | 陈科睿</title>
+  <meta name="author" content="Kerui Chen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- <link rel="icon" type="image/png" href="./images/icon.png"> -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a4292ca8f2fe5fd7dc6dfd78cc894aab";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:68%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Kerui Chen&nbsp | &nbsp 陈科睿</name>
+                  </p>
+                  <p>
+                    I am a first-year Ph.D. student in Computer Science at <a
+                    href="http://www.en.cs.zju.edu.cn/" target="_blank">College of Computer Science and Technology</a>, <a
+                      href="https://www.zju.edu.cn/english/" target="_blank">Zhejiang University</a>. My research interests lie
+                    in the fields of efficient large 3D model.
+                    Previously, I obtained my B.E. degree from <a href="http://www.en.cs.zju.edu.cn/"
+                      target="_blank">College of Computer Science and Technology</a>. During my
+                    undergraduate study, I was fortunate to work with Prof. <a href="http://yangy.org/"
+                      target="_blank">Yang Yang</a>, Prof. <a href="https://person.zju.edu.cn/wangcan" target="_blank">Can Wang</a>.
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:chenkr@zju.edu.cn">Email</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com/citations?user=t1q9R58AAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
+                    <a href="https://github.com/1233chen">Github</a>&nbsp/&nbsp
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- News -->
+          <table
+            style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <!-- <br> -->
+              <heading>News</heading>
+              <br>
+              <td style="padding:0px;width:100%;vertical-align:middle">
+                <p>
+                  <li>[2025/06] 🎉 Our paper <a href='https://arxiv.org/pdf/2502.01181'>BVINet</a> has been accepted
+                    to ICCV 2025!</li>
+                  <li>[2025/04] 🎉 Our paper <a href='https://arxiv.org/pdf/2501.15043'>PACSRNet</a> has been accepted
+                    to IJCAI 2025!</li>
+                  <li>[2024/08] 🎉 Our paper <a href='https://dl.acm.org/doi/abs/10.1145/3637528.3671953'>Brant-X</a> has been accepted
+                    to KDD 2024!</li>
+                </p>
+              </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+
+      <heading>Publications</heading>
+
+
+      <!-- ZPressor  -->
+      <tr bgcolor="#ffffdc">
+        <td style="padding:20px;width:30%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <br>
+              <img src='images/bvinet.png' width="190">
+            </div>
+            <br>
+            <img src='images/bvinet.png' width="190">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:70%;vertical-align:middle">
+          <a href="">
+            <papertitle>BVINet: Unlocking Blind Video Inpainting with Zero Annotations</papertitle>
+          </a>
+          <br>
+          <a class="a2" href="" target="_blank">Zhiliang Wu</a>,
+          <a class="a2" href="" target="_blank"><strong>Kerui Chen</strong></a>,
+          <a class="a2" href="" target="_blank">Kun Li</a>,
+          <a class="a2" href="" target="_blank">Hehe Fan</a>,
+          <a class="a2" href="" target="_blank">Yi Yang</a>
+          <br>
+          <a href="https://arxiv.org/pdf/2502.01181" target="_blank">Paper</a>
+          /
+          <a href="" target="_blank">Code</a>
+          <br>
+          <em><strong>ICCV 2025</strong></em>
+          <p></p>
+          <p>
+            We introduces a new task called blind video inpainting and proposes an end-to-end network, BVINet, 
+            which simultaneously learns to locate and inpaint corrupted regions without requiring annotated masks, enabling fully automatic video restoration.
+          </p>
+        </td>
+      </tr>
+
+      <!-- PM-Loss  -->
+      <tr bgcolor="#ffffdc">
+        <td style="padding:20px;width:30%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <br>
+              <img src='images/PACSRNet.png' width="190">
+            </div>
+            <br>
+            <img src='images/PACSRNet.png' width="190">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:70%;vertical-align:middle">
+          <a href="">
+            <papertitle>Prompt-Aware Controllable Shadow Removal</papertitle>
+          </a>
+          <br>
+          <a class="a2" href="https://openreview.net/profile?id=~Duochao_Shi1" target="_blank"><strong>Kerui Chen</strong></a>,
+          <a class="a2" href="https://lhmd.top/" target="_blank">Zhiliang Wu</a>,
+          <a class="a2" href="https://donydchen.github.io/" target="_blank">Wenjin Hou</a>,
+          <a class="a2" href="https://steve-zeyu-zhang.github.io/" target="_blank">Kun Li</a>,
+          <a class="a2" href="https://jwbian.net/" target="_blank">Hehe Fan</a>,
+          <a class="a2" href="https://bohanzhuang.github.io/" target="_blank">Yi Yang</a>,
+          <br>
+          <a href="https://arxiv.org/pdf/2501.15043" target="_blank">Paper</a>
+          /
+          <a href="" target="_blank">Code</a>
+          <br>
+          <em><strong>IJCAI 2025</strong></em>
+          <p></p>
+          <p>
+            We proposes PACSRNet, a prompt-aware controllable shadow removal network that enables user-guided, 
+            annotation-free shadow removal based on simple prompts, addressing limitations of existing methods in control and flexibility.
+          </p>
+        </td>
+      </tr>
+
+      <tr bgcolor="#ffffdc">
+        <td style="padding:20px;width:30%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='malle_image'>
+              <br>
+              <img src='images/Brant-x.png' width="190">
+            </div>
+            <br>
+            <img src='images/Brant-x.png' width="190">
+          </div>
+          <script type="text/javascript">
+            function malle_start() {
+              document.getElementById('malle_image').style.opacity = "1";
+            }
+
+            function malle_stop() {
+              document.getElementById('malle_image').style.opacity = "0";
+            }
+            malle_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:70%;vertical-align:middle">
+          <a href="">
+            <papertitle>Brant-X: A unified physiological signal alignment framework
+            </papertitle>
+          </a>
+          <br>
+          <a class="a2" href="" target="_blank">Daoze Zhang</a>,
+          <a class="a2" href="" target="_blank">Zhizhang Yuan</a>,
+          <a class="a2" href="" target="_blank">Junru Chen</a>,
+          <a class="a2" href="" target="_blank"><strong>Kerui Chen</strong></a>,
+          <a class="a2" href="" target="_blank">Yang Yang</a>
+          <br>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671953" target="_blank">Paper</a>
+          /
+          <a href="https://github.com/zjunet/Brant-X/" target="_blank">Code</a>
+          <br>
+          <em><strong>KDD 2024</strong></em>
+          <p></p>
+          <p>
+            We introduce Brant-X, a framework that transfers EEG knowledge to other physiological signals for better cross-signal understanding.
+          </p>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+
+  <table width="100%" align="center" border="0" cellpadding="10">
+    <tbody>
+      <br>
+      <heading>Competition Experience</heading>
+      <br>
+      <tr>
+        <br>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/gplt.png"
+            , width="100"></td>
+        <td width="90%" valign="center">
+          <strong><a href="" target="_blank">National Champion of China Collegiate Computing Contest</a></strong>
+          <br> 2024.4.30
+        </td>
+      </tr>
+      <tr>
+        <br>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/acm2.png"
+            , width="100"></td>
+        <td width="90%" valign="center">
+          <strong><a href="" target="_blank">ACM/ICPC International Collegiate Promgramming Contest Aisa Regional Contest Gold Medal</a></strong>
+          <br> 2022.12.17 - 2022.12.18
+        </td>
+      </tr>
+      <tr>
+        <br>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/acm2.png"
+            , width="100"></td>
+        <td width="90%" valign="center">
+          <strong><a href="" target="_blank">ACM/ICPC International Collegiate Promgramming Contest Aisa Regional Contest Gold Medal</a></strong>
+          <br> 2022.11.26 - 2022.11.27
+        </td>
+      </tr>
+      <tr>
+        <br>
+        <td style="padding-left:20px;padding-right:20px;width:20%;vertical-align:middle"><img src="images/ccpc.png"
+            , width="100"></td>
+        <td width="90%" valign="center">
+          <strong><a href="" target="_blank">ACM/CCPC China Collegiate Programming Contest Gold Medal </a></strong>
+          <br> 2021.11
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <table style="width:90%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+
+        <br>
+        <heading>Honors and Awards</heading>
+        <!-- <br> -->
+        <br>
+        <br>
+        <td style="padding:0px;width:100%;vertical-align:middle">
+          <p>
+            <li><em>2025.06</em> Outstanding Undergraduate Graduate of Zhejiang Province</li>
+          </p>
+          <p>
+            <li><em>2025.06</em> Outstanding Graduates of Zhejiang University</li>
+          </p>
+          <p>
+            <li><em>2025.06</em> Outstanding Thesis of Zhejiang University</li>
+          </p>
+          <p>
+            <li><em>2024.11</em> Zhijun He educational Scholarship</li>
+          </p>
+          <p>
+            <li><em>2024.10</em> National Scholarship</li>
+          </p>
+          <p>
+            <li><em>2024.10</em> First-class Scholarship of Zhejiang University</li>
+          </p>
+          <p>
+            <li><em>2023.10</em> Zhejiang Government Scholarship</li>
+          </p>
+          <p>
+            <li><em>2023.10</em> First-Class Scholarship in Zhejiang University</li>
+          </p>
+          <p>
+            <li><em>2023.10</em> Outstanding Student of Zhejiang University</li>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:0px">
+          <br>
+          <p style="text-align:right;font-size:small;">
+            This template is a modification to <a href="https://jonbarron.info/">Jon Barron's website</a>.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </td>
+  </tr>
+  </table>
+</body>
+
+</html>
